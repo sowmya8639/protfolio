@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, rgb(156, 78, 0), #87cf00);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header & Navigation */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: gold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: gold;
+  color: #003f7f;
+}
+
+/* Main Content */
+.page-content {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: gold;
+  text-shadow: 1px 1px 5px black;
+}
+
+.page-content p, .page-content li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.page-content ul {
+  text-align: left;
+  margin: auto;
+  max-width: 800px;
+}
+
+.page-content input[type="file"] {
+  display: block;
+  margin-top: 8px;
+  color: black;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-content > * {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Footer */
+footer {
+  background: #003f7f;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .page-content {
+    padding: 40px 5%;
+  }
+}
+
+/* Education Container */
+.education-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  height: 100vh;           /* Full viewport height */
+  text-align: center;
+  flex-direction: column;
+}
